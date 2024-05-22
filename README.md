@@ -2,4 +2,5 @@
 - Follow this URL to view live https://aaron-muti-420.github.io/
 - Feel free to create PRs where you see there is a needs improvement
 
-### This Project is licenced Under MIT licence 
+### This Project is licenced Under 
+[MIT License](./LICENSE)
