@@ -1,0 +1,50 @@
+/* ============================================================
+   THEME — Dark/Light mode overrides
+   The [data-theme="light"] attribute is set on <html>
+   ============================================================ */
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb {
+  background: var(--accent-1);
+  border-radius: var(--radius-pill);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-1);
+  color: #000;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--accent-1);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Theme toggle icon ──────────────────────────────────── */
+#theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  background: transparent;
+}
+
+#theme-toggle:hover {
+  border-color: var(--accent-1);
+  color: var(--accent-1);
+}
+
+/* Sun icon visible in dark mode (click to go light) */
+[data-theme="dark"] #theme-icon-sun  { display: inline; }
+[data-theme="dark"] #theme-icon-moon { display: none; }
+[data-theme="light"] #theme-icon-sun  { display: none; }
+[data-theme="light"] #theme-icon-moon { display: inline; }
