@@ -1,40 +1,94 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aaron Muti — QA Engineer, Data Engineer &amp; Founder of Zunda Technology Park. Based in Windhoek, Namibia.">
-  <meta name="author" content="Aaron Muti">
-  <title>Aaron Muti | QA Engineer &amp; Tech Enthusiast</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aaron Muti — QA Engineer, Data Engineer &amp; Founder of Zunda Technology Park. Based in Windhoek, Namibia."
+    />
+    <meta name="author" content="Aaron Muti" />
+    <title>Aaron Muti | QA Engineer &amp; Tech Enthusiast</title>
 
-  <!-- Google Fonts: Space Grotesk + Space Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Space Grotesk + Space Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/theme.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/animations.css">
-</head>
-<body>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <!-- PAGE LOADER -->
+    <div id="page-loader" role="status" aria-label="Loading">
+      <div class="loader-ring"></div>
+    </div>
 
-  <!-- PAGE LOADER -->
-  <div id="page-loader" role="status" aria-label="Loading">
-    <div class="loader-ring"></div>
-  </div>
+    <!-- NAVBAR -->
+    <nav
+      id="site-nav"
+      class="site-nav"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <a href="#home" class="nav-brand">A<span>M</span></a>
 
-  <!-- NAVBAR -->
-  <nav id="site-nav" class="site-nav" role="navigation" aria-label="Main navigation">
-    <a href="#home" class="nav-brand">A<span>M</span></a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#certifications">Certs</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-    <div class="nav-links">
+      <div class="nav-actions">
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle dark/light mode"
+        >
+          <i id="theme-icon-sun" class="fa-solid fa-sun"></i>
+          <i id="theme-icon-moon" class="fa-solid fa-moon"></i>
+        </button>
+        <button
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile overlay menu -->
+    <div
+      id="nav-mobile"
+      class="nav-mobile"
+      role="dialog"
+      aria-label="Mobile navigation"
+    >
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#resume">Resume</a>
@@ -42,704 +96,1079 @@
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#blog">Blog</a>
-      <a href="#certifications">Certs</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </div>
 
-    <div class="nav-actions">
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
-        <i id="theme-icon-sun" class="fa-solid fa-sun"></i>
-        <i id="theme-icon-moon" class="fa-solid fa-moon"></i>
-      </button>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
 
-  <!-- Mobile overlay menu -->
-  <div id="nav-mobile" class="nav-mobile" role="dialog" aria-label="Mobile navigation">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#resume">Resume</a>
-    <a href="#services">Services</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#blog">Blog</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-  </div>
+      <div class="hero__left">
+        <span class="hero__tag">Founder of Zunda Technology Park</span>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero__grid-bg" aria-hidden="true"></div>
+        <h1 class="hero__title">
+          I'm a<br />
+          <span id="typed-target"></span>
+        </h1>
 
-    <div class="hero__left">
-      <span class="hero__tag">Founder of Zunda Technology Park</span>
+        <p class="hero__subtitle">
+          Tech Enthusiast building innovations that benefit people and society
+          in Namibia and beyond.
+        </p>
 
-      <h1 class="hero__title">
-        I'm a<br>
-        <span id="typed-target"></span>
-      </h1>
-
-      <p class="hero__subtitle">
-        Tech Enthusiast building innovations that benefit people and society in Namibia and beyond.
-      </p>
-
-      <div class="btn-group">
-        <a href="https://calendly.com/aaronmuti/consultation-meeting" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          <i class="fa-solid fa-calendar-check"></i> Meet Now
-        </a>
-        <a href="docs/Aaron Muti CV Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <i class="fa-solid fa-file-arrow-down"></i> Download CV
-        </a>
-      </div>
-
-      <div class="hero__scroll" aria-hidden="true">
-        <span class="hero__scroll-line"></span>
-        <span>Scroll to explore</span>
-      </div>
-    </div>
-
-    <div class="hero__right" aria-hidden="true">
-      <div class="hero__photo" style="background-image: url('images/bg_1.png');"></div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="about__grid">
-        <div class="about__img-wrap reveal-left">
-          <img
-            class="about__img"
-            src="images/bg_1.png"
-            alt="Aaron Muti"
-            loading="lazy"
-            decoding="async"
+        <div class="btn-group">
+          <a
+            href="https://calendly.com/aaronmuti/consultation-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
           >
+            <i class="fa-solid fa-calendar-check"></i> Meet Now
+          </a>
+          <a
+            href="docs/Aaron Muti CV Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline"
+          >
+            <i class="fa-solid fa-file-arrow-down"></i> Download CV
+          </a>
         </div>
 
-        <div class="about__content reveal-right">
-          <div class="section-heading" style="position:relative;">
-            <span class="section-tag">Who I Am</span>
-            <span class="section-heading__bg" aria-hidden="true">About</span>
-            <h2>About Me</h2>
-          </div>
-
-          <p class="about__text">
-            I'm a Tech Enthusiast, passionate about using Technology to create useful innovations that benefit people and my society. I'm building <strong style="color:var(--accent-1)">Zunda Technology Park</strong> to make this a reality.
-          </p>
-          <p class="about__text">
-            Currently working as a QA Engineer at Capricorn Group, I specialize in automated testing, data engineering, and full-stack development. I believe in continuous learning and giving back through digital skills training.
-          </p>
-
-          <div class="about__stats">
-            <div class="about__stat">
-              <div class="about__stat-num" data-count="21">0</div>
-              <div class="about__stat-label">Workshops Completed</div>
-            </div>
-            <div class="about__stat">
-              <div class="about__stat-num" data-count="6">0</div>
-              <div class="about__stat-label">Projects Delivered</div>
-            </div>
-            <div class="about__stat">
-              <div class="about__stat-num" data-count="3">0</div>
-              <div class="about__stat-label">Certifications</div>
-            </div>
-            <div class="about__stat">
-              <div class="about__stat-num" data-count="4">0</div>
-              <div class="about__stat-label">Years Experience</div>
-            </div>
-          </div>
-
-          <div class="btn-group">
-            <a href="https://calendly.com/aaronmuti/consultation-meeting" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <i class="fa-solid fa-calendar-check"></i> Book a Meeting
-            </a>
-            <a href="#contact" class="btn btn-outline">
-              <i class="fa-solid fa-envelope"></i> Get in Touch
-            </a>
-          </div>
+        <div class="hero__scroll" aria-hidden="true">
+          <span class="hero__scroll-line"></span>
+          <span>Scroll to explore</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- RESUME / TIMELINE -->
-  <section id="resume" class="section section--alt">
-    <div class="container">
-      <div class="section-heading reveal" style="text-align:center;position:relative;">
-        <span class="section-tag">My Background</span>
-        <span class="section-heading__bg" aria-hidden="true" style="left:50%;transform:translateX(-50%);">Resume</span>
-        <h2>Experience &amp; Education</h2>
-        <p>My experiences and education have shaped me into a well-rounded individual. I am a Junior Data Engineer with a background in Business Informatics, constantly seeking to learn and grow.</p>
+      <div class="hero__right" aria-hidden="true">
+        <div
+          class="hero__photo"
+          style="background-image: url('images/bg_1.png')"
+        ></div>
       </div>
+    </section>
 
-      <div class="timeline">
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__img-wrap reveal-left">
+            <img
+              class="about__img"
+              src="images/bg_1.png"
+              alt="Aaron Muti"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-card">
-            <div class="timeline-card__header">
-              <span class="timeline-card__company">Capricorn Group</span>
-              <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;">
-                <span class="badge badge-red">CURRENT</span>
-                <span class="timeline-card__date">2024 – Present</span>
+          <div class="about__content reveal-right">
+            <div class="section-heading" style="position: relative">
+              <span class="section-tag">Who I Am</span>
+              <span class="section-heading__bg" aria-hidden="true">About</span>
+              <h2>About Me</h2>
+            </div>
+
+            <p class="about__text">
+              I'm a Tech Enthusiast, passionate about using Technology to create
+              useful innovations that benefit people and my society. I'm
+              building
+              <strong style="color: var(--accent-1)"
+                >Zunda Technology Park</strong
+              >
+              to make this a reality.
+            </p>
+            <p class="about__text">
+              Currently working as a QA Engineer at Capricorn Group, I
+              specialize in automated testing, data engineering, and full-stack
+              development. I believe in continuous learning and giving back
+              through digital skills training.
+            </p>
+
+            <div class="about__stats">
+              <div class="about__stat">
+                <div class="about__stat-num" data-count="21">0</div>
+                <div class="about__stat-label">Workshops Completed</div>
+              </div>
+              <div class="about__stat">
+                <div class="about__stat-num" data-count="6">0</div>
+                <div class="about__stat-label">Projects Delivered</div>
+              </div>
+              <div class="about__stat">
+                <div class="about__stat-num" data-count="3">0</div>
+                <div class="about__stat-label">Certifications</div>
+              </div>
+              <div class="about__stat">
+                <div class="about__stat-num" data-count="4">0</div>
+                <div class="about__stat-label">Years Experience</div>
               </div>
             </div>
-            <div class="timeline-card__role">QA Engineer</div>
-            <p class="timeline-card__desc">
-              Building and maintaining automated test frameworks using Selenium, NUnit, and C#. Designed end-to-end automation for the treasury system, integrating ExtentReports and AutoIt. Work with REST APIs and verify data migrations using SQL and PL/SQL across production environments. Parse ISO 20022 messages and perform regression testing across financial services platforms.
-            </p>
-          </div>
-        </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-card">
-            <div class="timeline-card__header">
-              <span class="timeline-card__company">Telecom Namibia</span>
-              <span class="timeline-card__date">2023 – Present</span>
-            </div>
-            <div class="timeline-card__role">IP-IT Technician in Training</div>
-            <p class="timeline-card__desc">
-              Part of the Graduates Development Program aimed at training graduates. Learning how Telecom Namibia operates and how to maintain its IT infrastructure.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-card">
-            <div class="timeline-card__header">
-              <span class="timeline-card__company">DeNamIT</span>
-              <span class="timeline-card__date">2023 – 2024</span>
-            </div>
-            <div class="timeline-card__role">Software Tester</div>
-            <p class="timeline-card__desc">
-              DeNamIT is focused on providing Quality Assurance. Worked as a Software Tester responsible for testing software to ensure it meets client requirements.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-card">
-            <div class="timeline-card__header">
-              <span class="timeline-card__company">UNESCO India Africa Hackathon</span>
-              <span class="timeline-card__date">November 2022</span>
-            </div>
-            <div class="timeline-card__role">Project Manager</div>
-            <p class="timeline-card__desc">
-              A 3-day event held in India. Led the team on an education problem statement — developed an ML model to predict a career path for students based on academic performance.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-divider reveal">
-          <span>Education</span>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-card">
-            <div class="timeline-card__header">
-              <span class="timeline-card__company">Namibia University of Science &amp; Technology</span>
-              <span class="timeline-card__date">2019 – 2023</span>
-            </div>
-            <div class="timeline-card__role">Bachelor of Informatics — Business Informatics</div>
-            <p class="timeline-card__desc">
-              Learned the fundamentals of Business &amp; Informatics. Used Python with Jupyter Notebook for EDA and data visualizations, working with Pandas, NumPy, Matplotlib, and Seaborn for statistical analysis. This is where my tech career started.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="resume__download reveal">
-        <a href="docs/Aaron Muti CV Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          <i class="fa-solid fa-file-arrow-down"></i> Download Full CV
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="section">
-    <div class="container">
-      <div class="section-heading reveal" style="position:relative;">
-        <span class="section-tag">What I Offer</span>
-        <span class="section-heading__bg" aria-hidden="true">Services</span>
-        <h2>Consultation Services</h2>
-        <p>These are the services I offer. Reach out for collaboration!</p>
-      </div>
-
-      <div class="grid-3">
-        <div class="service-card reveal">
-          <i class="fa-solid fa-globe service-card__icon"></i>
-          <div class="service-card__title">Web Development</div>
-          <p class="service-card__desc">Custom websites and web apps built for performance and usability.</p>
-        </div>
-        <div class="service-card reveal">
-          <i class="fa-solid fa-camera service-card__icon"></i>
-          <div class="service-card__title">Photography</div>
-          <p class="service-card__desc">Professional DSLR photography for events, portraits, and more.</p>
-        </div>
-        <div class="service-card reveal">
-          <i class="fa-solid fa-laptop-code service-card__icon"></i>
-          <div class="service-card__title">IT Consultations</div>
-          <p class="service-card__desc">Strategic IT advice and technical consultancy for businesses and individuals.</p>
-        </div>
-        <div class="service-card reveal">
-          <i class="fa-solid fa-mobile-screen service-card__icon"></i>
-          <div class="service-card__title">Mobile App Development</div>
-          <p class="service-card__desc">Cross-platform mobile applications tailored to your business needs.</p>
-        </div>
-        <div class="service-card reveal">
-          <i class="fa-solid fa-database service-card__icon"></i>
-          <div class="service-card__title">Data Engineering</div>
-          <p class="service-card__desc">Data pipelines, analysis, and visualization to drive informed decisions.</p>
-        </div>
-        <div class="service-card reveal">
-          <i class="fa-solid fa-chalkboard-user service-card__icon"></i>
-          <div class="service-card__title">Digital Skills Training</div>
-          <p class="service-card__desc">Workshops and training to empower communities with digital skills.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section section--alt">
-    <div class="container">
-      <div class="section-heading reveal" style="position:relative;">
-        <span class="section-tag">My Toolkit</span>
-        <span class="section-heading__bg" aria-hidden="true">Skills</span>
-        <h2>Technical Skills</h2>
-        <p>Skills I've acquired over the years — always looking for opportunities to apply and grow them.</p>
-      </div>
-
-      <div class="skills__grid">
-        <div class="skill-item reveal">
-          <div class="skill-item__header">
-            <span class="skill-item__name">WordPress</span>
-            <span class="skill-item__pct">85%</span>
-          </div>
-          <div class="skill-item__track">
-            <div class="skill-item__bar" style="width:85%"></div>
-          </div>
-        </div>
-        <div class="skill-item reveal">
-          <div class="skill-item__header">
-            <span class="skill-item__name">DSLR Camera (Canon)</span>
-            <span class="skill-item__pct">85%</span>
-          </div>
-          <div class="skill-item__track">
-            <div class="skill-item__bar" style="width:85%"></div>
-          </div>
-        </div>
-        <div class="skill-item reveal">
-          <div class="skill-item__header">
-            <span class="skill-item__name">CSS</span>
-            <span class="skill-item__pct">70%</span>
-          </div>
-          <div class="skill-item__track">
-            <div class="skill-item__bar" style="width:70%"></div>
-          </div>
-        </div>
-        <div class="skill-item reveal">
-          <div class="skill-item__header">
-            <span class="skill-item__name">Python</span>
-            <span class="skill-item__pct">65%</span>
-          </div>
-          <div class="skill-item__track">
-            <div class="skill-item__bar" style="width:65%"></div>
-          </div>
-        </div>
-        <div class="skill-item reveal">
-          <div class="skill-item__header">
-            <span class="skill-item__name">JavaScript</span>
-            <span class="skill-item__pct">50%</span>
-          </div>
-          <div class="skill-item__track">
-            <div class="skill-item__bar" style="width:50%"></div>
-          </div>
-        </div>
-        <div class="skill-item reveal">
-          <div class="skill-item__header">
-            <span class="skill-item__name">PHP</span>
-            <span class="skill-item__pct">45%</span>
-          </div>
-          <div class="skill-item__track">
-            <div class="skill-item__bar" style="width:45%"></div>
-          </div>
-        </div>
-        <div class="skill-item reveal">
-          <div class="skill-item__header">
-            <span class="skill-item__name">Laravel</span>
-            <span class="skill-item__pct">30%</span>
-          </div>
-          <div class="skill-item__track">
-            <div class="skill-item__bar" style="width:30%"></div>
-          </div>
-        </div>
-        <div class="skill-item reveal">
-          <div class="skill-item__header">
-            <span class="skill-item__name">C# / Selenium / NUnit</span>
-            <span class="skill-item__pct">60%</span>
-          </div>
-          <div class="skill-item__track">
-            <div class="skill-item__bar" style="width:60%"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="container">
-      <div class="section-heading reveal" style="position:relative;">
-        <span class="section-tag">My Work</span>
-        <span class="section-heading__bg" aria-hidden="true">Projects</span>
-        <h2>Recent Projects</h2>
-        <p>Some of the projects I've worked on in the past.</p>
-      </div>
-
-      <div class="projects__grid">
-        <div class="project-card reveal">
-          <img class="project-card__img" src="images/project-4.jpg" alt="Global Intercultural Project Experience" loading="lazy" decoding="async">
-          <div class="project-card__overlay">
-            <div class="project-card__title">Global Intercultural Project Experience</div>
-            <div class="project-card__role">Project Management</div>
-            <a href="https://gipe.thm-it.de/" target="_blank" rel="noopener noreferrer" class="project-card__link">
-              View Project <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <img class="project-card__img" src="images/project-5.jpg" alt="Africa Code Week" loading="lazy" decoding="async">
-          <div class="project-card__overlay">
-            <div class="project-card__title">Africa Code Week</div>
-            <div class="project-card__role">Coding Trainer</div>
-            <a href="https://elyambala.glowdom.com/" target="_blank" rel="noopener noreferrer" class="project-card__link">
-              View Project <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <img class="project-card__img" src="images/project-1.jpg" alt="UNESCO India Africa Hackathon" loading="lazy" decoding="async">
-          <div class="project-card__overlay">
-            <div class="project-card__title">UNESCO India Africa Hackathon</div>
-            <div class="project-card__role">AI / ML</div>
-            <a href="https://uia.mic.gov.in/" target="_blank" rel="noopener noreferrer" class="project-card__link">
-              View Project <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <img class="project-card__img" src="images/project_2.JPG" alt="Dev Junction — CC-HUB Namibia" loading="lazy" decoding="async">
-          <div class="project-card__overlay">
-            <div class="project-card__title">Dev Junction</div>
-            <div class="project-card__role">CC-HUB Namibia</div>
-            <a href="https://cchub.africa/" target="_blank" rel="noopener noreferrer" class="project-card__link">
-              View Project <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <img class="project-card__img" src="images/project-2.jpg" alt="Hackathonista" loading="lazy" decoding="async">
-          <div class="project-card__overlay">
-            <div class="project-card__title">Hackathonista</div>
-            <div class="project-card__role">Mentor</div>
-            <a href="https://elyambala.glowdom.com/" target="_blank" rel="noopener noreferrer" class="project-card__link">
-              View Project <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <img class="project-card__img" src="images/project-3.jpg" alt="Mandalorians-UIA" loading="lazy" decoding="async">
-          <div class="project-card__overlay">
-            <div class="project-card__title">Mandalorians-UIA</div>
-            <div class="project-card__role">Diversity</div>
-            <a href="https://uia.mic.gov.in/" target="_blank" rel="noopener noreferrer" class="project-card__link">
-              View Project <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VIDEO -->
-  <section id="video" class="section video-section">
-    <div class="container">
-      <div class="video-section__inner">
-        <div class="reveal-left">
-          <p class="video-section__label">Featured Story</p>
-          <h2 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem;">UNESCO India Africa Hackathon</h2>
-          <p style="color:var(--text-secondary);margin-bottom:1.5rem;">
-            Representing Namibia on an international stage in India. A journey in AI, education, and cross-cultural collaboration.
-          </p>
-          <span class="badge badge-gold">2022</span>
-          <span style="margin-left:0.5rem;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);">Namibian in India</span>
-        </div>
-        <div class="video-embed reveal-right">
-          <iframe
-            src="https://www.youtube.com/embed/1xU4Hz64Fz0"
-            title="UNESCO India Africa Hackathon — Namibian in India"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOG -->
-  <section id="blog" class="section section--alt">
-    <div class="container">
-      <div class="section-heading reveal" style="position:relative;">
-        <span class="section-tag">Thoughts &amp; Insights</span>
-        <span class="section-heading__bg" aria-hidden="true">Blog</span>
-        <h2>Articles &amp; Writing</h2>
-        <p>Sharing experiences, lessons learned, and perspectives from the tech world.</p>
-      </div>
-      <div id="blog-grid" class="grid-3"></div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="section">
-    <div class="container">
-      <div class="section-heading reveal" style="position:relative;">
-        <span class="section-tag">Credentials</span>
-        <span class="section-heading__bg" aria-hidden="true">Certs</span>
-        <h2>Certifications</h2>
-        <p>Professional certifications earned. Click to view digital badge.</p>
-      </div>
-
-      <div class="grid-3">
-        <a href="https://www.credly.com/badges/4974bec7-5112-4163-bcf2-4d1da2fdb215/linked_in_profile" target="_blank" rel="noopener noreferrer" class="cert-card reveal" style="text-decoration:none;">
-          <div style="width:80px;height:80px;background:var(--bg-elevated);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--accent-1);font-size:2rem;">
-            <i class="fa-solid fa-shield-halved"></i>
-          </div>
-          <span class="cert-card__issuer">CompTIA</span>
-          <span class="cert-card__name">IT Fundamentals (ITF+)</span>
-          <span class="btn btn-outline" style="font-size:0.8rem;padding:0.4rem 1rem;pointer-events:none;">View Badge <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-        </a>
-
-        <a href="https://app.skillsclub.com/credential/66983-594ac679c86219870ea7da4ee72b70300d92671943a84c1f3bd902b5f8c90b40?locale=en&badge=true" target="_blank" rel="noopener noreferrer" class="cert-card reveal" style="text-decoration:none;">
-          <div style="width:80px;height:80px;background:var(--bg-elevated);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--accent-3);font-size:2rem;">
-            <i class="fa-solid fa-bug-slash"></i>
-          </div>
-          <span class="cert-card__issuer">ISTQB</span>
-          <span class="cert-card__name">Certified Tester Foundation Level 4.0</span>
-          <span class="btn btn-outline" style="font-size:0.8rem;padding:0.4rem 1rem;pointer-events:none;">View Badge <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-        </a>
-
-        <a href="https://www.credly.com/badges/3702aedc-60d8-43cc-a72b-63f76845d677/linked_in_profile" target="_blank" rel="noopener noreferrer" class="cert-card reveal" style="text-decoration:none;">
-          <div style="width:80px;height:80px;background:var(--bg-elevated);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--text-primary);font-size:2rem;">
-            <i class="fa-brands fa-github"></i>
-          </div>
-          <span class="cert-card__issuer">GitHub</span>
-          <span class="cert-card__name">All In Open Source Contributor</span>
-          <span class="btn btn-outline" style="font-size:0.8rem;padding:0.4rem 1rem;pointer-events:none;">View Badge <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BANNER -->
-  <section class="cta-banner" style="background-image: url('images/bg_1.jpg');">
-    <div class="cta-banner__inner reveal">
-      <h2 class="cta-banner__title">I'm <strong>Open</strong> for Freelancing Projects</h2>
-      <p class="cta-banner__text">Looking to work on tech projects that benefit the economic development of Nkurenkuru and Namibia.</p>
-      <a href="https://calendly.com/aaronmuti/consultation-meeting" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-        <i class="fa-solid fa-calendar-check"></i> Meet Now
-      </a>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section section--alt">
-    <div class="container">
-      <div class="section-heading reveal" style="position:relative;">
-        <span class="section-tag">Let's Talk</span>
-        <span class="section-heading__bg" aria-hidden="true">Contact</span>
-        <h2>Get in Touch</h2>
-        <p>Reach out — let's collaborate on projects!</p>
-      </div>
-
-      <div class="contact__grid">
-        <div class="reveal-left">
-          <div class="contact-info-item">
-            <div class="contact-info-item__icon"><i class="fa-solid fa-location-dot"></i></div>
-            <div>
-              <div class="contact-info-item__label">Address</div>
-              <div class="contact-info-item__value">10th Street, Nkurenkuru, Kavango West, Namibia</div>
+            <div class="btn-group">
+              <a
+                href="https://calendly.com/aaronmuti/consultation-meeting"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+              >
+                <i class="fa-solid fa-calendar-check"></i> Book a Meeting
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <i class="fa-solid fa-envelope"></i> Get in Touch
+              </a>
             </div>
           </div>
-          <div class="contact-info-item">
-            <div class="contact-info-item__icon"><i class="fa-solid fa-phone"></i></div>
-            <div>
-              <div class="contact-info-item__label">Phone</div>
-              <div class="contact-info-item__value"><a href="tel:+264813421180">+264 81 342 1180</a></div>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-item__icon"><i class="fa-solid fa-envelope"></i></div>
-            <div>
-              <div class="contact-info-item__label">Email</div>
-              <div class="contact-info-item__value"><a href="mailto:mutiaaron2@gmail.com">mutiaaron2@gmail.com</a></div>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-item__icon"><i class="fa-solid fa-globe"></i></div>
-            <div>
-              <div class="contact-info-item__label">Website</div>
-              <div class="contact-info-item__value"><a href="https://aaronmuti.com" target="_blank" rel="noopener noreferrer">aaronmuti.com</a></div>
-            </div>
-          </div>
-
-          <div class="social-links" style="margin-top:2rem;">
-            <a href="https://www.linkedin.com/in/aaron-muti-%F0%9F%87%B3%F0%9F%87%A6-8210b8236/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.github.com/aaron-muti-420/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/aaron_muti/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/muti.aaron.9/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="reveal-right">
-          <form
-            id="contact-form"
-            action="https://formspree.io/f/YOUR_FORM_ID"
-            method="POST"
+    <!-- RESUME / TIMELINE -->
+    <section id="resume" class="section section--alt">
+      <div class="container">
+        <div
+          class="section-heading reveal"
+          style="text-align: center; position: relative"
+        >
+          <span class="section-tag">My Background</span>
+          <span
+            class="section-heading__bg"
+            aria-hidden="true"
+            style="left: 50%; transform: translateX(-50%)"
+            >Resume</span
           >
-            <input type="hidden" name="_subject" value="Portfolio Contact — aaronmuti.com">
-            <div class="form-group">
-              <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+          <h2>Experience &amp; Education</h2>
+          <p>
+            My experiences and education have shaped me into a well-rounded
+            individual. I am a Junior Data Engineer with a background in
+            Business Informatics, constantly seeking to learn and grow.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-card__header">
+                <span class="timeline-card__company">Capricorn Group</span>
+                <div
+                  style="
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <span class="badge badge-red">CURRENT</span>
+                  <span class="timeline-card__date">2024 – Present</span>
+                </div>
+              </div>
+              <div class="timeline-card__role">QA Engineer</div>
+              <p class="timeline-card__desc">
+                Building and maintaining automated test frameworks using
+                Selenium, NUnit, and C#. Designed end-to-end automation for the
+                treasury system, integrating ExtentReports and AutoIt. Work with
+                REST APIs and verify data migrations using SQL and PL/SQL across
+                production environments. Parse ISO 20022 messages and perform
+                regression testing across financial services platforms.
+              </p>
             </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-card__header">
+                <span class="timeline-card__company">Telecom Namibia</span>
+                <span class="timeline-card__date">2023 – Present</span>
+              </div>
+              <div class="timeline-card__role">
+                IP-IT Technician in Training
+              </div>
+              <p class="timeline-card__desc">
+                Part of the Graduates Development Program aimed at training
+                graduates. Learning how Telecom Namibia operates and how to
+                maintain its IT infrastructure.
+              </p>
             </div>
-            <div class="form-group">
-              <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-card__header">
+                <span class="timeline-card__company">DeNamIT</span>
+                <span class="timeline-card__date">2023 – 2024</span>
+              </div>
+              <div class="timeline-card__role">Software Tester</div>
+              <p class="timeline-card__desc">
+                DeNamIT is focused on providing Quality Assurance. Worked as a
+                Software Tester responsible for testing software to ensure it
+                meets client requirements.
+              </p>
             </div>
-            <div class="form-group">
-              <textarea id="message" name="message" class="form-control" placeholder="Your message..." rows="6" required></textarea>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-card__header">
+                <span class="timeline-card__company"
+                  >UNESCO India Africa Hackathon</span
+                >
+                <span class="timeline-card__date">November 2022</span>
+              </div>
+              <div class="timeline-card__role">Project Manager</div>
+              <p class="timeline-card__desc">
+                A 3-day event held in India. Led the team on an education
+                problem statement — developed an ML model to predict a career
+                path for students based on academic performance.
+              </p>
             </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
-              <i class="fa-solid fa-paper-plane"></i> Send Message
-            </button>
-            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-          </form>
+          </div>
+
+          <div class="timeline-divider reveal">
+            <span>Education</span>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-card__header">
+                <span class="timeline-card__company"
+                  >Namibia University of Science &amp; Technology</span
+                >
+                <span class="timeline-card__date">2019 – 2023</span>
+              </div>
+              <div class="timeline-card__role">
+                Bachelor of Informatics — Business Informatics
+              </div>
+              <p class="timeline-card__desc">
+                Learned the fundamentals of Business &amp; Informatics. Used
+                Python with Jupyter Notebook for EDA and data visualizations,
+                working with Pandas, NumPy, Matplotlib, and Seaborn for
+                statistical analysis. This is where my tech career started.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume__download reveal">
+          <a
+            href="docs/Aaron Muti CV Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            <i class="fa-solid fa-file-arrow-down"></i> Download Full CV
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__brand">A<span>M</span></div>
-          <p class="footer__desc">A Visionary looking to Transform the Namibian Economy using cutting-edge Technology.</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/aaron-muti-%F0%9F%87%B3%F0%9F%87%A6-8210b8236/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.github.com/aaron-muti-420/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-heading reveal" style="position: relative">
+          <span class="section-tag">What I Offer</span>
+          <span class="section-heading__bg" aria-hidden="true">Services</span>
+          <h2>Consultation Services</h2>
+          <p>These are the services I offer. Reach out for collaboration!</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="service-card reveal">
+            <i class="fa-solid fa-globe service-card__icon"></i>
+            <div class="service-card__title">Web Development</div>
+            <p class="service-card__desc">
+              Custom websites and web apps built for performance and usability.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <i class="fa-solid fa-camera service-card__icon"></i>
+            <div class="service-card__title">Photography</div>
+            <p class="service-card__desc">
+              Professional DSLR photography for events, portraits, and more.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <i class="fa-solid fa-laptop-code service-card__icon"></i>
+            <div class="service-card__title">IT Consultations</div>
+            <p class="service-card__desc">
+              Strategic IT advice and technical consultancy for businesses and
+              individuals.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <i class="fa-solid fa-mobile-screen service-card__icon"></i>
+            <div class="service-card__title">Mobile App Development</div>
+            <p class="service-card__desc">
+              Cross-platform mobile applications tailored to your business
+              needs.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <i class="fa-solid fa-database service-card__icon"></i>
+            <div class="service-card__title">Data Engineering</div>
+            <p class="service-card__desc">
+              Data pipelines, analysis, and visualization to drive informed
+              decisions.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <i class="fa-solid fa-chalkboard-user service-card__icon"></i>
+            <div class="service-card__title">Digital Skills Training</div>
+            <p class="service-card__desc">
+              Workshops and training to empower communities with digital skills.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <div class="section-heading reveal" style="position: relative">
+          <span class="section-tag">My Toolkit</span>
+          <span class="section-heading__bg" aria-hidden="true">Skills</span>
+          <h2>Technical Skills</h2>
+          <p>
+            Skills I've acquired over the years — always looking for
+            opportunities to apply and grow them.
+          </p>
+        </div>
+
+        <div class="skills__grid">
+          <div class="skill-item reveal">
+            <div class="skill-item__header">
+              <span class="skill-item__name">WordPress</span>
+              <span class="skill-item__pct">85%</span>
+            </div>
+            <div class="skill-item__track">
+              <div class="skill-item__bar" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-item__header">
+              <span class="skill-item__name">DSLR Camera (Canon)</span>
+              <span class="skill-item__pct">85%</span>
+            </div>
+            <div class="skill-item__track">
+              <div class="skill-item__bar" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-item__header">
+              <span class="skill-item__name">CSS</span>
+              <span class="skill-item__pct">70%</span>
+            </div>
+            <div class="skill-item__track">
+              <div class="skill-item__bar" style="width: 70%"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-item__header">
+              <span class="skill-item__name">Python</span>
+              <span class="skill-item__pct">65%</span>
+            </div>
+            <div class="skill-item__track">
+              <div class="skill-item__bar" style="width: 65%"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-item__header">
+              <span class="skill-item__name">JavaScript</span>
+              <span class="skill-item__pct">50%</span>
+            </div>
+            <div class="skill-item__track">
+              <div class="skill-item__bar" style="width: 50%"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-item__header">
+              <span class="skill-item__name">PHP</span>
+              <span class="skill-item__pct">45%</span>
+            </div>
+            <div class="skill-item__track">
+              <div class="skill-item__bar" style="width: 45%"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-item__header">
+              <span class="skill-item__name">Laravel</span>
+              <span class="skill-item__pct">30%</span>
+            </div>
+            <div class="skill-item__track">
+              <div class="skill-item__bar" style="width: 30%"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-item__header">
+              <span class="skill-item__name">C# / Selenium / NUnit</span>
+              <span class="skill-item__pct">60%</span>
+            </div>
+            <div class="skill-item__track">
+              <div class="skill-item__bar" style="width: 60%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-heading reveal" style="position: relative">
+          <span class="section-tag">My Work</span>
+          <span class="section-heading__bg" aria-hidden="true">Projects</span>
+          <h2>Recent Projects</h2>
+          <p>Some of the projects I've worked on in the past.</p>
+        </div>
+
+        <div class="projects__grid">
+          <div class="project-card reveal">
+            <img
+              class="project-card__img"
+              src="images/project-4.jpg"
+              alt="Global Intercultural Project Experience"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="project-card__overlay">
+              <div class="project-card__title">
+                Global Intercultural Project Experience
+              </div>
+              <div class="project-card__role">Project Management</div>
+              <a
+                href="https://gipe.thm-it.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-card__link"
+              >
+                View Project <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <img
+              class="project-card__img"
+              src="images/project-5.jpg"
+              alt="Africa Code Week"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="project-card__overlay">
+              <div class="project-card__title">Africa Code Week</div>
+              <div class="project-card__role">Coding Trainer</div>
+              <a
+                href="https://elyambala.glowdom.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-card__link"
+              >
+                View Project <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <img
+              class="project-card__img"
+              src="images/project-1.jpg"
+              alt="UNESCO India Africa Hackathon"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="project-card__overlay">
+              <div class="project-card__title">
+                UNESCO India Africa Hackathon
+              </div>
+              <div class="project-card__role">AI / ML</div>
+              <a
+                href="https://uia.mic.gov.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-card__link"
+              >
+                View Project <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <img
+              class="project-card__img"
+              src="images/project_2.JPG"
+              alt="Dev Junction — CC-HUB Namibia"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="project-card__overlay">
+              <div class="project-card__title">Dev Junction</div>
+              <div class="project-card__role">CC-HUB Namibia</div>
+              <a
+                href="https://cchub.africa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-card__link"
+              >
+                View Project <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <img
+              class="project-card__img"
+              src="images/project-2.jpg"
+              alt="Hackathonista"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="project-card__overlay">
+              <div class="project-card__title">Hackathonista</div>
+              <div class="project-card__role">Mentor</div>
+              <a
+                href="https://elyambala.glowdom.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-card__link"
+              >
+                View Project <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <img
+              class="project-card__img"
+              src="images/project-3.jpg"
+              alt="Mandalorians-UIA"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="project-card__overlay">
+              <div class="project-card__title">Mandalorians-UIA</div>
+              <div class="project-card__role">Diversity</div>
+              <a
+                href="https://uia.mic.gov.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-card__link"
+              >
+                View Project <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="section video-section">
+      <div class="container">
+        <div class="video-section__inner">
+          <div class="reveal-left">
+            <p class="video-section__label">Featured Story</p>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem">
+              UNESCO India Africa Hackathon
+            </h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem">
+              Representing Namibia on an international stage in India. A journey
+              in AI, education, and cross-cultural collaboration.
+            </p>
+            <span class="badge badge-gold">2022</span>
+            <span
+              style="
+                margin-left: 0.5rem;
+                font-family: var(--font-mono);
+                font-size: 0.8rem;
+                color: var(--text-muted);
+              "
+              >Namibian in India</span
+            >
+          </div>
+          <div class="video-embed reveal-right">
+            <iframe
+              src="https://www.youtube.com/embed/1xU4Hz64Fz0"
+              title="UNESCO India Africa Hackathon — Namibian in India"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="section section--alt">
+      <div class="container">
+        <div class="section-heading reveal" style="position: relative">
+          <span class="section-tag">Thoughts &amp; Insights</span>
+          <span class="section-heading__bg" aria-hidden="true">Blog</span>
+          <h2>Articles &amp; Writing</h2>
+          <p>
+            Sharing experiences, lessons learned, and perspectives from the tech
+            world.
+          </p>
+        </div>
+        <div id="blog-grid" class="grid-3"></div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-heading reveal" style="position: relative">
+          <span class="section-tag">Credentials</span>
+          <span class="section-heading__bg" aria-hidden="true">Certs</span>
+          <h2>Certifications</h2>
+          <p>
+            Professional certifications earned. Click to view digital badge.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <a
+            href="https://www.credly.com/badges/4974bec7-5112-4163-bcf2-4d1da2fdb215/linked_in_profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cert-card reveal"
+            style="text-decoration: none"
+          >
+            <div
+              style="
+                width: 80px;
+                height: 80px;
+                background: var(--bg-elevated);
+                border-radius: var(--radius-md);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--accent-1);
+                font-size: 2rem;
+              "
+            >
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <span class="cert-card__issuer">CompTIA</span>
+            <span class="cert-card__name">IT Fundamentals (ITF+)</span>
+            <span
+              class="btn btn-outline"
+              style="
+                font-size: 0.8rem;
+                padding: 0.4rem 1rem;
+                pointer-events: none;
+              "
+              >View Badge <i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></span>
+          </a>
+
+          <a
+            href="https://app.skillsclub.com/credential/66983-594ac679c86219870ea7da4ee72b70300d92671943a84c1f3bd902b5f8c90b40?locale=en&badge=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cert-card reveal"
+            style="text-decoration: none"
+          >
+            <div
+              style="
+                width: 80px;
+                height: 80px;
+                background: var(--bg-elevated);
+                border-radius: var(--radius-md);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--accent-3);
+                font-size: 2rem;
+              "
+            >
+              <i class="fa-solid fa-bug-slash"></i>
+            </div>
+            <span class="cert-card__issuer">ISTQB</span>
+            <span class="cert-card__name"
+              >Certified Tester Foundation Level 4.0</span
+            >
+            <span
+              class="btn btn-outline"
+              style="
+                font-size: 0.8rem;
+                padding: 0.4rem 1rem;
+                pointer-events: none;
+              "
+              >View Badge <i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></span>
+          </a>
+
+          <a
+            href="https://www.credly.com/badges/3702aedc-60d8-43cc-a72b-63f76845d677/linked_in_profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cert-card reveal"
+            style="text-decoration: none"
+          >
+            <div
+              style="
+                width: 80px;
+                height: 80px;
+                background: var(--bg-elevated);
+                border-radius: var(--radius-md);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--text-primary);
+                font-size: 2rem;
+              "
+            >
               <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/aaron_muti/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/muti.aaron.9/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <div class="footer__col-title">Quick Links</div>
-          <nav class="footer__links" aria-label="Footer navigation">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#resume">Resume</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
-
-        <div>
-          <div class="footer__col-title">Services</div>
-          <div class="footer__links">
-            <span style="color:var(--text-muted);font-size:0.9rem;">Web Development</span>
-            <span style="color:var(--text-muted);font-size:0.9rem;">Business Consultation</span>
-            <span style="color:var(--text-muted);font-size:0.9rem;">Data Engineering</span>
-            <span style="color:var(--text-muted);font-size:0.9rem;">Photography</span>
-            <span style="color:var(--text-muted);font-size:0.9rem;">Digital Skills Training</span>
-          </div>
-        </div>
-
-        <div>
-          <div class="footer__col-title">Have Questions?</div>
-          <div class="footer__contact-line">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>10th Street, Nkurenkuru, Kavango West, Namibia</span>
-          </div>
-          <div class="footer__contact-line">
-            <i class="fa-solid fa-phone"></i>
-            <a href="tel:+264813421180">+264 81 342 1180</a>
-          </div>
-          <div class="footer__contact-line">
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:mutiaaron2@gmail.com">mutiaaron2@gmail.com</a>
-          </div>
+            </div>
+            <span class="cert-card__issuer">GitHub</span>
+            <span class="cert-card__name">All In Open Source Contributor</span>
+            <span
+              class="btn btn-outline"
+              style="
+                font-size: 0.8rem;
+                padding: 0.4rem 1rem;
+                pointer-events: none;
+              "
+              >View Badge <i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></span>
+          </a>
         </div>
       </div>
+    </section>
 
-      <div class="footer__bottom">
-        <p class="footer__copy">
-          &copy; <script>document.write(new Date().getFullYear())</script> Aaron Muti.
-          Developed by <a href="https://g.co/kgs/LA6fNcy" target="_blank" rel="noopener noreferrer">Zunda Technology Park</a>
+    <!-- CTA BANNER -->
+    <section
+      class="cta-banner"
+      style="background-image: url('images/bg_1.jpg')"
+    >
+      <div class="cta-banner__inner reveal">
+        <h2 class="cta-banner__title">
+          I'm <strong>Open</strong> for Freelancing Projects
+        </h2>
+        <p class="cta-banner__text">
+          Looking to work on tech projects that benefit the economic development
+          of Nkurenkuru and Namibia.
         </p>
-        <p class="footer__copy">Built with love in Namibia</p>
+        <a
+          href="https://calendly.com/aaronmuti/consultation-meeting"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          <i class="fa-solid fa-calendar-check"></i> Meet Now
+        </a>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="js/blog-data.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    if (typeof Typed !== 'undefined') {
-      new Typed('#typed-target', {
-        strings: ['Techie.', 'QA Engineer.', 'Builder.', 'Namibian.'],
-        typeSpeed: 70,
-        backSpeed: 45,
-        backDelay: 1800,
-        loop: true,
-        smartBackspace: true
-      });
-    }
-  </script>
-</body>
+    <!-- CONTACT -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <div class="section-heading reveal" style="position: relative">
+          <span class="section-tag">Let's Talk</span>
+          <span class="section-heading__bg" aria-hidden="true">Contact</span>
+          <h2>Get in Touch</h2>
+          <p>Reach out — let's collaborate on projects!</p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="reveal-left">
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="contact-info-item__label">Address</div>
+                <div class="contact-info-item__value">
+                  10th Street, Nkurenkuru, Kavango West, Namibia
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="contact-info-item__label">Phone</div>
+                <div class="contact-info-item__value">
+                  <a href="tel:+264813421180">+264 81 342 1180</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="contact-info-item__label">Email</div>
+                <div class="contact-info-item__value">
+                  <a href="mailto:mutiaaron2@gmail.com">mutiaaron2@gmail.com</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <div>
+                <div class="contact-info-item__label">Website</div>
+                <div class="contact-info-item__value">
+                  <a
+                    href="https://aaronmuti.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >aaronmuti.com</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links" style="margin-top: 2rem">
+              <a
+                href="https://www.linkedin.com/in/aaron-muti-%F0%9F%87%B3%F0%9F%87%A6-8210b8236/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.github.com/aaron-muti-420/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/aaron_muti/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/muti.aaron.9/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal-right">
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/xbdpakdw"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Portfolio Contact — aaronmuti.com"
+              />
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="form-control"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control"
+                  placeholder="Your message..."
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="width: 100%; justify-content: center"
+              >
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+              <p
+                id="form-status"
+                class="form-status"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <div class="footer__brand">A<span>M</span></div>
+            <p class="footer__desc">
+              A Visionary looking to Transform the Namibian Economy using
+              cutting-edge Technology.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/aaron-muti-%F0%9F%87%B3%F0%9F%87%A6-8210b8236/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.github.com/aaron-muti-420/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/aaron_muti/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/muti.aaron.9/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer__col-title">Quick Links</div>
+            <nav class="footer__links" aria-label="Footer navigation">
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#resume">Resume</a>
+              <a href="#services">Services</a>
+              <a href="#projects">Projects</a>
+              <a href="#blog">Blog</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+
+          <div>
+            <div class="footer__col-title">Services</div>
+            <div class="footer__links">
+              <span style="color: var(--text-muted); font-size: 0.9rem"
+                >Web Development</span
+              >
+              <span style="color: var(--text-muted); font-size: 0.9rem"
+                >Business Consultation</span
+              >
+              <span style="color: var(--text-muted); font-size: 0.9rem"
+                >Data Engineering</span
+              >
+              <span style="color: var(--text-muted); font-size: 0.9rem"
+                >Photography</span
+              >
+              <span style="color: var(--text-muted); font-size: 0.9rem"
+                >Digital Skills Training</span
+              >
+            </div>
+          </div>
+
+          <div>
+            <div class="footer__col-title">Have Questions?</div>
+            <div class="footer__contact-line">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>10th Street, Nkurenkuru, Kavango West, Namibia</span>
+            </div>
+            <div class="footer__contact-line">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+264813421180">+264 81 342 1180</a>
+            </div>
+            <div class="footer__contact-line">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:mutiaaron2@gmail.com">mutiaaron2@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copy">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Aaron Muti. Developed by
+            <a
+              href="https://g.co/kgs/LA6fNcy"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Zunda Technology Park</a
+            >
+          </p>
+          <p class="footer__copy">Built with love in Namibia</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="js/blog-data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      if (typeof Typed !== "undefined") {
+        new Typed("#typed-target", {
+          strings: ["Techie.", "QA Engineer.", "Builder.", "Namibian."],
+          typeSpeed: 70,
+          backSpeed: 45,
+          backDelay: 1800,
+          loop: true,
+          smartBackspace: true,
+        });
+      }
+    </script>
+  </body>
 </html>
