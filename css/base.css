@@ -1,0 +1,209 @@
+/* ============================================================
+   BASE — Reset, typography, containers, utilities
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: var(--line-height);
+  color: var(--text-primary);
+  background-color: var(--bg-base);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--accent-1);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover { color: var(--accent-2); }
+
+ul, ol { list-style: none; }
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+/* ── Container ─────────────────────────────────────────── */
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  width: 100%;
+}
+
+/* ── Typography ─────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1em;
+}
+
+p:last-child { margin-bottom: 0; }
+
+.mono { font-family: var(--font-mono); }
+
+/* ── Section scaffold ───────────────────────────────────── */
+.section {
+  padding-block: var(--space-xl);
+  position: relative;
+}
+
+.section--alt { background-color: var(--bg-surface); }
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-1);
+  margin-bottom: var(--space-xs);
+}
+
+.section-heading {
+  margin-bottom: var(--space-md);
+}
+
+.section-heading h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-top: var(--space-sm);
+}
+
+/* Oversized decorative background word */
+.section-heading__bg {
+  display: block;
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: 800;
+  color: var(--accent-1);
+  opacity: 0.04;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  top: -0.2em;
+  left: -0.1em;
+  white-space: nowrap;
+}
+
+/* ── Grid utilities ─────────────────────────────────────── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 992px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Flex utilities ─────────────────────────────────────── */
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-gap { display: flex; align-items: center; gap: var(--space-sm); }
+
+/* ── Visibility ─────────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* ── Loader ─────────────────────────────────────────────── */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#page-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-ring {
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--accent-1);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
